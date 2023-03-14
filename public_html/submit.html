@@ -44,25 +44,18 @@
             </div>
 
             <script>
-                var email=localStorage.getItem("email");
-                var fname=localStorage.getItem("fname");
-                var mno=localStorage.getItem("mobile");
-                var gen =localStorage.getItem("gen");
-                var c=localStorage.getItem("cname");
-                var event=localStorage.getItem("event");
-                var p=localStorage.getItem("participation");
-                var course=localStorage.getItem("course");
+                const formData = new URLSearchParams(window.location.search);
 
-                document.getElementById("eo").innerHTML=email;
-                document.getElementById("fnr").innerHTML=fname;
-                document.getElementById("mn").innerHTML=mno;
-                document.getElementById("e").innerHTML=event;
-                document.getElementById("g").innerHTML=gen;
-                document.getElementById("pa").innerHTML=p;
-                document.getElementById("cname").innerHTML=c;
-                document.getElementById("course").innerHTML=course;
+                document.getElementById("eo").innerHTML= formData.get("email");
+                document.getElementById("fnr").innerHTML= formData.get("fname");
+                document.getElementById("mn").innerHTML= formData.get("mobile");
+                document.getElementById("e").innerHTML= formData.get("event");
+                document.getElementById("g").innerHTML= formData.get("gender");
+                document.getElementById("pa").innerHTML= formData.get("participation");
+                document.getElementById("cname").innerHTML= formData.get("Cname");
+                document.getElementById("course").innerHTML= formData.get("course");
     
-                localStorage.clear();
+  
             </script>
     </body>
 </html>
